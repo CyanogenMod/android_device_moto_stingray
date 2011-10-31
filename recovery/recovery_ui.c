@@ -95,12 +95,12 @@ int device_wipe_data() {
     int result = 0;
 
     if (device_has_bp()) {
-        ui_print("Performing BP clear...\n");
+        //ui_print("Performing BP clear...\n");
         result = bp_master_clear();
-        if(result == 0)
-            ui_print("BP clear complete successfully.\n");
-        else
-            ui_print("BP clear failed.\n");
+        // if(result == 0)
+        //     ui_print("BP clear complete successfully.\n");
+        // else
+        //     ui_print("BP clear failed.\n");
     }
 
     return 0;
