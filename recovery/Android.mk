@@ -5,7 +5,7 @@ include $(CLEAR_VARS)
 
 LOCAL_MODULE_TAGS := eng
 
-LOCAL_SRC_FILES := recovery_ui.c masterclear_bp.c
+LOCAL_SRC_FILES := recovery_ui.cpp masterclear_bp.c
 LOCAL_C_INCLUDES += bootable/recovery
 # should match TARGET_RECOVERY_UI_LIB set in BoardConfig.mk
 LOCAL_MODULE := librecovery_ui_stingray
