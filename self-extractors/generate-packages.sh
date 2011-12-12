@@ -14,8 +14,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-ZIP=trygon-ota-201632.zip
-BUILD=irl06c
+# 201632 = IRL06C
+# 236517 = IML70C
+ZIP=trygon-ota-236517.zip
+BUILD=iml70c
 ROOTDEVICE=stingray
 DEVICE=stingray
 MANUFACTURER=moto
