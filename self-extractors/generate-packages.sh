@@ -16,8 +16,9 @@
 
 # 201632 = IRL06C
 # 236517 = IML70C
-ZIP=trygon-ota-236517.zip
-BUILD=iml70c
+# 237179 = IML73
+ZIP=trygon-ota-237179.zip
+BUILD=iml73
 ROOTDEVICE=stingray
 DEVICE=stingray
 MANUFACTURER=moto
