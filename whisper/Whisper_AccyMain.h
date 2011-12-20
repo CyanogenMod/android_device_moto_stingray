@@ -40,7 +40,7 @@
 #define DBG_TRACE(fmt,x...) \
                 do \
                 { \
-                    LOGD(fmt" from %s() in %s(%d)\n",## x,__FUNCTION__,__FILE__,__LINE__); \
+                    ALOGD(fmt" from %s() in %s(%d)\n",## x,__FUNCTION__,__FILE__,__LINE__); \
                 }while(0)
 #define DBG_ERROR(fmt,x...) \
                 do \

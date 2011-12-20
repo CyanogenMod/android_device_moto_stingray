@@ -136,7 +136,7 @@ set_notification_light(struct light_state_t const* state)
 	unsigned int brightness = rgb_to_brightness(state);
 	int blink = state->flashOnMS;
 
-	LOGD("set_notification_light colorRGB=%08X, onMS=%d, offMS=%d\n",
+	ALOGD("set_notification_light colorRGB=%08X, onMS=%d, offMS=%d\n",
 			state->color, state->flashOnMS, state->flashOffMS);
 
 	write_int("/sys/class/leds/notification-led/brightness", brightness);
