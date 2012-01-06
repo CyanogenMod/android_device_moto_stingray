@@ -21,6 +21,8 @@
      for different hardware and product builds. -->
 <resources>
 
+    <string name="config_datause_iface">rmnet0</string>
+
     <!-- This string array should be overridden by the device to present a list of network
          attributes.  This is used by the connectivity manager to decide which networks can coexist
          based on the hardware -->
@@ -86,7 +88,7 @@
     </string-array>
 
     <!-- Enable puk unlockscreen -->
-    <bool name="config_enable_puk_unlock_screen">true</bool>	
+    <bool name="config_enable_puk_unlock_screen">true</bool>
 
     <string-array name="config_usbHostBlacklist">
         <!--  /dev/bus/usb/003 is the external bus. Exclude the others. 
