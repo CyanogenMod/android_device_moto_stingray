@@ -20,10 +20,10 @@
 # definition file).
 #
 
-ifeq ($(filter trygon trygon_l10n calgon full_stingray tyranid stingray,$(TARGET_PRODUCT)),)
+ifeq ($(filter trygon trygon_l10n calgon full_stingray tyranid stingray cm_stingray,$(TARGET_PRODUCT)),)
 $(warning The stingray device can only be used)
 $(warning with the following TARGET_PRODUCT:)
-$(warning trygon trygon_l10n calgon full_stingray tyranid stingray)
+$(warning trygon trygon_l10n calgon full_stingray tyranid stingray cm_stingray)
 $(warning and you are using $(TARGET_PRODUCT).)
 $(warning If that's correct, you need to modify)
 $(warning the following files:)
