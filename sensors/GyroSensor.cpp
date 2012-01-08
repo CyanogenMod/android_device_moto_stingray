@@ -69,7 +69,7 @@ int GyroSensor::enable(int32_t, int en)
         }
         err = ioctl(dev_fd, L3G4200D_IOCTL_SET_ENABLE, &flags);
         err = err<0 ? -errno : 0;
-        LOGE_IF(err, "L3G4200D_IOCTL_SET_ENABLE failed (%s)", strerror(-err));
+        ALOGE_IF(err, "L3G4200D_IOCTL_SET_ENABLE failed (%s)", strerror(-err));
         if (!err) {
             mEnabled = flags;
         }
@@ -116,7 +116,7 @@ int GyroSensor::readEvents(sensors_event_t* data, int count)
                 numEventReceived++;
             }
         } else {
-            LOGE("GyroSensor: unknown event (type=%d, code=%d)",
+            ALOGE("GyroSensor: unknown event (type=%d, code=%d)",
                     type, event->code);
         }
         mInputReader.next();

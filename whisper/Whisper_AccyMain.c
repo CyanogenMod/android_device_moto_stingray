@@ -594,7 +594,7 @@ static int accyInit(void) {
     if(stat(LOG_FILE_PATH, &statBuf) == 0) {
         logFp = fopen(LOG_FILE_NAME, "w");
         if (logFp == NULL) {
-            LOGE("whisperd: Unable to open the Logfile %s", LOG_FILE_NAME);
+            ALOGE("whisperd: Unable to open the Logfile %s", LOG_FILE_NAME);
         }
     }
 #endif

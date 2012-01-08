@@ -54,7 +54,7 @@ int LightSensor::enable(int32_t, int en) {
         }
         err = ioctl(dev_fd, MAX9635_IOCTL_SET_ENABLE,&en);
         err = err<0 ? -errno : 0;
-        LOGE_IF(err, "MAX9635_IOCTL_SET_ENABLE failed (%s)", strerror(-err));
+        ALOGE_IF(err, "MAX9635_IOCTL_SET_ENABLE failed (%s)", strerror(-err));
         if (!err) {
             mEnabled = en;
         }
@@ -105,7 +105,7 @@ int LightSensor::readEvents(sensors_event_t* data, int count)
             if (type == 4 && event->code == 3) {
                 // weird, not sure why we're getting this all the time
             } else {
-                LOGE("LightSensor: unknown event (type=%d, code=%d)",
+                ALOGE("LightSensor: unknown event (type=%d, code=%d)",
                         type, event->code);
             }
         }
