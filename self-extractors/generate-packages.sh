@@ -21,8 +21,9 @@
 # 238432 = IML74E
 # 238649 = IML74G
 # 239410 = IML74K
-ZIP=trygon-ota-239410.zip
-BUILD=iml74k
+# 262866 = IMM30D
+ZIP=trygon-ota-262866.zip
+BUILD=imm30d
 ROOTDEVICE=stingray
 DEVICE=stingray
 MANUFACTURER=moto
