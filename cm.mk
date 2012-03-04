@@ -15,4 +15,4 @@ PRODUCT_MODEL := Xoom
 PRODUCT_MANUFACTURER := Motorola
 
 #Set build fingerprint / ID / Product Name ect.
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=trygon BUILD_ID=HLK75F BUILD_FINGERPRINT="verizon/trygon/stingray:3.2.4/HLK75F/221360:user/release-keys" PRIVATE_BUILD_DESC="trygon-user 3.2.4 HLK75F 221360 release-keys"
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=trygon BUILD_FINGERPRINT="verizon/trygon/stingray:3.2.4/HLK75F/221360:user/release-keys" PRIVATE_BUILD_DESC="trygon-user 3.2.4 HLK75F 221360 release-keys"
