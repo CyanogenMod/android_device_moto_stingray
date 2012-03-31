@@ -30,7 +30,7 @@ $(warning the following files:)
 $(warning device/moto/stingray/BoardConfig.mk)
 $(warning device/moto/wingray/device_base.mk)
 $(warning and (if it comes from git))
-$(warning vendor/moto/stingray/stingray-vendor.mk)
+$(warning vendor/motorola/stingray/stingray-vendor.mk)
 $(error unknown TARGET_PRODUCT for stingray)
 endif
 
