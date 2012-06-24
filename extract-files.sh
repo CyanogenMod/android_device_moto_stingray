@@ -30,6 +30,8 @@ adb pull /system/app/MotoModemUtil.apk ../../../vendor/$MANUFACTURER/$DEVICE/pro
 adb pull /system/app/MotoSimUiHelper.apk ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/MotoSimUiHelper.apk
 adb pull /system/app/StingrayProgramMenu.apk ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/StingrayProgramMenu.apk
 adb pull /system/app/StingrayProgramMenuSystem.apk ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/StingrayProgramMenuSystem.apk
+adb pull /system/app/VZWAPNLib.apk ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/VZWAPNLib.apk
+adb pull /system/app/VZWAPNService.apk ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/VZWAPNService.apk
 adb pull /system/bin/akmd2 ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/akmd2
 adb pull /system/bin/batch ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/batch
 adb pull /system/bin/brcm_guci_drv ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/brcm_guci_drv
@@ -64,6 +66,9 @@ adb pull /system/etc/gpsconfig.xml ../../../vendor/$MANUFACTURER/$DEVICE/proprie
 adb pull /system/etc/location.cfg ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/location.cfg
 adb pull /system/etc/motorola/12m/key_code_map.txt ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/key_code_map.txt
 adb pull /system/etc/motorola/12m/tcmd_leds.cfg ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/tcmd_leds.cfg
+adb pull /system/etc/permissions/com.vzw.hardware.ehrpd.xml ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/com.vzw.hardware.ehrpd.xml
+adb pull /system/etc/permissions/com.vzw.hardware.lte.xml ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/com.vzw.hardware.lte.xml
+adb pull /system/etc/permissions/com.vzw.vzwapnlib.xml ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/com.vzw.vzwapnlib.xml
 adb pull /system/etc/security/suplcerts.bks ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/suplcerts.bks
 adb pull /system/etc/voip_aud_params.bin ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/voip_aud_params.bin
 adb pull /system/etc/wifi/bcm4329.cal ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/bcm4329.cal
@@ -140,6 +145,9 @@ PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/brcm_guci_drv:system/bin/brcm_guci_drv \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/bugtogo.sh:system/bin/bugtogo.sh \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/bypassfactory:system/bin/bypassfactory \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/com.vzw.hardware.ehrpd.xml:system/etc/permissions/com.vzw.hardware.ehrpd.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/com.vzw.hardware.lte.xml:system/etc/permissions/com.vzw.hardware.lte.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/com.vzw.vzwapnlib.xml:system/etc/permissions/com.vzw.vzwapnlib.xml \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/ftmipcd:system/bin/ftmipcd \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/location:system/bin/location \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/savebpver:system/bin/savebpver \\
@@ -231,7 +239,9 @@ PRODUCT_PACKAGES += \\
     MotoModemUtil \\
     MotoSimUiHelper \\
     StingrayProgramMenu \\
-    StingrayProgramMenuSystem
+    StingrayProgramMenuSystem \\
+    VZWAPNLib \\
+    VZWAPNService
 
 EOF
 
@@ -370,6 +380,30 @@ include \$(BUILD_PREBUILT)
 include \$(CLEAR_VARS)
 
 LOCAL_MODULE := StingrayProgramMenuSystem
+LOCAL_SRC_FILES := \$(LOCAL_MODULE).apk
+LOCAL_MODULE_CLASS := APPS
+LOCAL_MODULE_TAGS := optional
+LOCAL_CERTIFICATE := PRESIGNED
+LOCAL_MODULE_SUFFIX := \$(COMMON_ANDROID_PACKAGE_SUFFIX)
+include \$(BUILD_PREBUILT)
+
+# VZWAPNLib
+
+include \$(CLEAR_VARS)
+
+LOCAL_MODULE := VZWAPNLib
+LOCAL_SRC_FILES := \$(LOCAL_MODULE).apk
+LOCAL_MODULE_CLASS := APPS
+LOCAL_MODULE_TAGS := optional
+LOCAL_CERTIFICATE := PRESIGNED
+LOCAL_MODULE_SUFFIX := \$(COMMON_ANDROID_PACKAGE_SUFFIX)
+include \$(BUILD_PREBUILT)
+
+# VZWAPNService
+
+include \$(CLEAR_VARS)
+
+LOCAL_MODULE := VZWAPNService
 LOCAL_SRC_FILES := \$(LOCAL_MODULE).apk
 LOCAL_MODULE_CLASS := APPS
 LOCAL_MODULE_TAGS := optional

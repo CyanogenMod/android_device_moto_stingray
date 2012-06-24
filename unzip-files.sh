@@ -30,6 +30,8 @@ unzip -j -o ../../../${DEVICE}_update.zip system/app/MotoModemUtil.apk -d ../../
 unzip -j -o ../../../${DEVICE}_update.zip system/app/MotoSimUiHelper.apk -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 unzip -j -o ../../../${DEVICE}_update.zip system/app/StingrayProgramMenu.apk -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 unzip -j -o ../../../${DEVICE}_update.zip system/app/StingrayProgramMenuSystem.apk -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
+unzip -j -o ../../../${DEVICE}_update.zip /system/app/VZWAPNLib.apk ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/VZWAPNLib.apk
+unzip -j -o ../../../${DEVICE}_update.zip /system/app/VZWAPNService.apk ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/VZWAPNService.apk
 unzip -j -o ../../../${DEVICE}_update.zip system/bin/akmd2 -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 unzip -j -o ../../../${DEVICE}_update.zip system/bin/batch -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 unzip -j -o ../../../${DEVICE}_update.zip system/bin/brcm_guci_drv -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
@@ -64,6 +66,9 @@ unzip -j -o ../../../${DEVICE}_update.zip system/etc/gpsconfig.xml -d ../../../v
 unzip -j -o ../../../${DEVICE}_update.zip system/etc/location.cfg -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 unzip -j -o ../../../${DEVICE}_update.zip system/etc/motorola/12m/key_code_map.txt -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 unzip -j -o ../../../${DEVICE}_update.zip system/etc/motorola/12m/tcmd_leds.cfg -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
+unzip -j -o ../../../${DEVICE}_update.zip /system/etc/permissions/com.vzw.hardware.ehrpd.xml ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/com.vzw.hardware.ehrpd.xml
+unzip -j -o ../../../${DEVICE}_update.zip /system/etc/permissions/com.vzw.hardware.lte.xml ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/com.vzw.hardware.lte.xml
+unzip -j -o ../../../${DEVICE}_update.zip /system/etc/permissions/com.vzw.vzwapnlib.xml ../../../vendor/$MANUFACTURER/$DEVICE/proprietary/com.vzw.vzwapnlib.xml
 unzip -j -o ../../../${DEVICE}_update.zip system/etc/security/suplcerts.bks -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 unzip -j -o ../../../${DEVICE}_update.zip system/etc/voip_aud_params.bin -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
 unzip -j -o ../../../${DEVICE}_update.zip system/etc/wifi/bcm4329.cal -d ../../../vendor/$MANUFACTURER/$DEVICE/proprietary
@@ -140,6 +145,9 @@ PRODUCT_COPY_FILES += \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/brcm_guci_drv:system/bin/brcm_guci_drv \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/bugtogo.sh:system/bin/bugtogo.sh \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/bypassfactory:system/bin/bypassfactory \\
+vendor/__MANUFACTURER__/__DEVICE__/proprietary/com.vzw.hardware.ehrpd.xml:system/etc/permissions/com.vzw.hardware.ehrpd.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/com.vzw.hardware.lte.xml:system/etc/permissions/com.vzw.hardware.lte.xml \\
+    vendor/__MANUFACTURER__/__DEVICE__/proprietary/com.vzw.vzwapnlib.xml:system/etc/permissions/com.vzw.vzwapnlib.xml \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/ftmipcd:system/bin/ftmipcd \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/location:system/bin/location \\
     vendor/__MANUFACTURER__/__DEVICE__/proprietary/savebpver:system/bin/savebpver \\
@@ -231,7 +239,9 @@ PRODUCT_PACKAGES += \\
     MotoModemUtil \\
     MotoSimUiHelper \\
     StingrayProgramMenu \\
-    StingrayProgramMenuSystem
+    StingrayProgramMenuSystem \\
+    VZWAPNLib \\
+    VZWAPNService
 
 EOF
 
@@ -370,6 +380,30 @@ include \$(BUILD_PREBUILT)
 include \$(CLEAR_VARS)
 
 LOCAL_MODULE := StingrayProgramMenuSystem
+LOCAL_SRC_FILES := \$(LOCAL_MODULE).apk
+LOCAL_MODULE_CLASS := APPS
+LOCAL_MODULE_TAGS := optional
+LOCAL_CERTIFICATE := PRESIGNED
+LOCAL_MODULE_SUFFIX := \$(COMMON_ANDROID_PACKAGE_SUFFIX)
+include \$(BUILD_PREBUILT)
+
+# VZWAPNLib
+
+include \$(CLEAR_VARS)
+
+LOCAL_MODULE := VZWAPNLib
+LOCAL_SRC_FILES := \$(LOCAL_MODULE).apk
+LOCAL_MODULE_CLASS := APPS
+LOCAL_MODULE_TAGS := optional
+LOCAL_CERTIFICATE := PRESIGNED
+LOCAL_MODULE_SUFFIX := \$(COMMON_ANDROID_PACKAGE_SUFFIX)
+include \$(BUILD_PREBUILT)
+
+# VZWAPNService
+
+include \$(CLEAR_VARS)
+
+LOCAL_MODULE := VZWAPNService
 LOCAL_SRC_FILES := \$(LOCAL_MODULE).apk
 LOCAL_MODULE_CLASS := APPS
 LOCAL_MODULE_TAGS := optional
