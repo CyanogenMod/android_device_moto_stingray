@@ -73,8 +73,7 @@ PRODUCT_PACKAGES += \
     wrigley-dump \
     wrigley-diag \
     wrigley-iptables \
-    wrigley-fetch-mpr \
-    Torch
+    wrigley-fetch-mpr
 
 # Overrides
 DEVICE_PACKAGE_OVERLAYS := \
