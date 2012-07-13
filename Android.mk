@@ -19,4 +19,8 @@ subdir_makefiles := \
 	$(LOCAL_PATH)/recovery/Android.mk \
 	$(LOCAL_PATH)/whisper/Android.mk
 
+ifneq ($(filter stingray wingray,$(TARGET_DEVICE)),)
+
 include $(subdir_makefiles)
+
+endif
