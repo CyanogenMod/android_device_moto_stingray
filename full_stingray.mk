@@ -21,6 +21,7 @@
 
 # A few more packages that aren't quite used on all builds
 PRODUCT_PACKAGES := \
+        rild \
         HoloSpiralWallpaper \
         LiveWallpapersPicker \
         VisualizationWallpapers
