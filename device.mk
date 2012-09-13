@@ -16,6 +16,9 @@
 
 $(call inherit-product, device/moto/wingray/device_base.mk)
 
+# inherit from the non-open-source side, if present
+$(call inherit-product-if-exists, vendor/motorola/stingray/stingray-vendor.mk)
+
 PRODUCT_COPY_FILES += \
     device/moto/stingray/oem-iptables-init.sh:system/bin/oem-iptables-init.sh \
     device/moto/stingray/ril/tty2ttyd:system/bin/tty2ttyd \
