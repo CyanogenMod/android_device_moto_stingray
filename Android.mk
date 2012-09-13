@@ -11,16 +11,3 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
-LOCAL_PATH := $(my-dir)
-subdir_makefiles := \
-	$(LOCAL_PATH)/sensors/Android.mk \
-	$(LOCAL_PATH)/liblights/Android.mk \
-	$(LOCAL_PATH)/recovery/Android.mk \
-	$(LOCAL_PATH)/whisper/Android.mk
-
-ifneq ($(filter stingray wingray,$(TARGET_DEVICE)),)
-
-include $(subdir_makefiles)
-
-endif
