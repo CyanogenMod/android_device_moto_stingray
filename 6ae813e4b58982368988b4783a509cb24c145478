@@ -1,0 +1,8 @@
+Change-Id: I6ae813e4b58982368988b4783a509cb24c145478
+Code-Review+2: Takazumi Matsumoto <tdr@taksmon.com>
+Verified+1: Takazumi Matsumoto <tdr@taksmon.com>
+Submitted-by: Takazumi Matsumoto <tdr@taksmon.com>
+Submitted-at: Mon, 15 Oct 2012 07:31:13 -0700
+Reviewed-on: http://review.cyanogenmod.com/25007
+Project: CyanogenMod/android_device_moto_stingray
+Branch: refs/heads/jellybean
