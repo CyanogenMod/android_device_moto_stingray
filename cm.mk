@@ -2,7 +2,7 @@
 PRODUCT_RELEASE_NAME := XOOM-LTE
 
 # Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_tablet_wifionly.mk)
+$(call inherit-product, vendor/cm/config/common_mini_tablet_wifionly.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/moto/stingray/full_stingray.mk)
