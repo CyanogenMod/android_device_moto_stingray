@@ -20,13 +20,11 @@ persist.ril.tcmd.ttydevice=/dev/usb/tty2-1:1.3
 persist.ril.diag.ttydevice=/dev/usb/tty2-1:1.0
 ril.wrigley.modem.tty=/dev/usb/tty1-1:1.10
 #Leave default mode to 4 (CDMA) but need it to be Global (7) for LTE/CDMA
-ro.telephony.default_network=4
+ro.telephony.default_network=7
+telephony.lteOnCdmaDevice=1
 
 # Disable ims by setting imsapp.mode to all_dependency_met
 #imsapp.mode=all_dependency_met
-
-# The value of the kernel command line product_type variable for lte on cdma devices
-telephony.lteOnCdmaProductType=clw
 
 # The OpenGL ES API level that is natively supported by this device.
 # This is a 16.16 fixed point number
