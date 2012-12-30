@@ -7,11 +7,11 @@
     {
         "repository": "android_device_moto_wingray",
         "target_path": "device/moto/wingray",
-        "branch": "jellybean"
+        "branch": "cm-10.1"
     },
     {
         "repository": "motorola-kernel-stingray",
         "target_path": "kernel/motorola/stingray",
-        "branch": "jellybean"
+        "branch": "cm-10.1"
     }
 ]
