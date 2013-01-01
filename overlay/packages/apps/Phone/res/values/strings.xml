@@ -19,4 +19,14 @@
     <!-- Preference title for launching an account manager page for prepaid LTE [CHAR LIMIT=30] -->
     <string name="cdma_lte_data_service">Verizon data service</string>
 
+    <!-- Mobile network settings, network mode choices for a device supporting CDMA and LTE [CHAR LIMIT=25] -->
+    <string-array name="preferred_network_mode_choices_lte">
+        <item>LTE/CDMA</item>
+        <item>CDMA/EvDo auto</item>
+    </string-array>
+    <string-array name="preferred_network_mode_values_lte" translatable="false">
+        <item>"7"</item>
+        <item>"4"</item>
+    </string-array>
+
 </resources>
