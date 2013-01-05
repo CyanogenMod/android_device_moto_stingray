@@ -27,7 +27,8 @@ ro.cdma.subscription=0
 
 # The OpenGL ES API level that is natively supported by this device.
 # This is a 16.16 fixed point number
-ro.opengles.version = 131072
+ro.opengles.version=131072
+ro.opengles.surface.rgb565=true
 
 # Indicate carrier OTA SP number schema
 # refer to frameworks/base/telephony/java/com/android/
