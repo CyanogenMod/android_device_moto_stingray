@@ -35,5 +35,5 @@ $(error unknown TARGET_PRODUCT for stingray)
 endif
 
 include device/moto/wingray/BoardConfig.mk
-BOARD_KERNEL_CMDLINE :=
+BOARD_KERNEL_CMDLINE := product_type=clw
 
