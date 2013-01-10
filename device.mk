@@ -80,4 +80,4 @@ PRODUCT_PACKAGES += \
 
 # Overrides
 DEVICE_PACKAGE_OVERLAYS := \
-    device/moto/stingray/overlay device/moto/wingray/overlay
+    device/moto/stingray/overlay device/moto/wingray/overlay-common
