@@ -38,4 +38,5 @@ include device/moto/wingray/BoardConfig.mk
 
 # Stingray specific
 BOARD_KERNEL_CMDLINE := product_type=clw
+BOARD_RIL_CLASS := "../../../device/moto/stingray/ril/"
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/moto/stingray/bluetooth

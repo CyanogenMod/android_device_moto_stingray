@@ -1,4 +1,5 @@
 # RIL and telephony related settings
+ro.telephony.ril_class=MotoWrigleyStingrayRIL
 rild.libargs=-d /dev/chnlat10
 #Point to lte, CDMA, MM RILs
 lte_ril.libpath=/system/lib/libmoto_lte_ril.so
