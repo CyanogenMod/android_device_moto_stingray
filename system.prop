@@ -23,8 +23,7 @@ ril.wrigley.modem.tty=/dev/usb/tty1-1:1.10
 #Leave default mode to 4 (CDMA) but need it to be Global (7) for LTE/CDMA
 ro.telephony.default_network=7
 telephony.lteOnCdmaDevice=1
-ril.subscription.types=RUIM,NV
-ro.cdma.subscription=0
+ril.subscription.types=RUIM
 
 # The OpenGL ES API level that is natively supported by this device.
 # This is a 16.16 fixed point number
@@ -35,7 +34,6 @@ ro.opengles.surface.rgb565=true
 # refer to frameworks/base/telephony/java/com/android/
 # internal/telephony/cdma/CDMAPhone.java for the schema:
 ro.cdma.otaspnumschema=SELC,1,80,99
-ro.cdma.subscribe_on_ruim_ready=true
 
 # Google use the system property to control if allow device to be unlock without SIM
 keyguard.no_require_sim=true
