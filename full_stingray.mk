@@ -19,10 +19,6 @@
 # product configuration (apps).
 #
 
-# For data connection
-PRODUCT_PACKAGES := \
-    rild
-
 # Additional settings used in all AOSP builds
 PRODUCT_PROPERTY_OVERRIDES := \
     ro.com.android.dateformat=MM-dd-yyyy
@@ -45,6 +41,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/locales_full.mk)
 
 # Get everything else from the parent package
 $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_no_telephony.mk)
+
+# For data connection
+PRODUCT_PACKAGES += \
+    rild
 
 # Device specific
 $(call inherit-product, device/moto/stingray/device.mk)
